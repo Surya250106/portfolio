@@ -15,7 +15,7 @@ This is my personal portfolio website built with modern web technologies, showca
 - **Icons:** Lucide React
 
 ## Live Deployment
-[Live Site URL (Update after deployment)](#)
+https://vercel.com/surya250106s-projects/my-portfolio
 
 ## Local Development Setup
 
@@ -23,7 +23,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Surya250106/portfolio
    cd portfolio
    ```
 
