@@ -15,7 +15,7 @@ This is my personal portfolio website built with modern web technologies, showca
 - **Icons:** Lucide React
 
 ## Live Deployment
-https://vercel.com/surya250106s-projects/my-portfolio
+https://my-portfolio-psi-smoky-36.vercel.app/
 
 ## Local Development Setup
 
