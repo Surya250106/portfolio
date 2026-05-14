@@ -22,21 +22,21 @@ export default function About() {
           <div className="w-full md:w-1/2">
             <div className="relative aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-3xl transform rotate-3 scale-105 opacity-50 blur-lg"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=1974&auto=format&fit=crop" 
-                alt="Developer workspace" 
+              <img
+                src="https://media.licdn.com/dms/image/v2/D5603AQF9UmkpfeQyYA/profile-displayphoto-crop_800_800/B56Z0eV1cRI0AI-/0/1774330536609?e=1780531200&v=beta&t=LGHSfrZyhoQMc2W6u7HPZTxcQIJIoGXRlj5xWZRpubM"
+                alt="Developer workspace"
                 className="relative rounded-3xl object-cover w-full h-full shadow-2xl border border-slate-700/50 grayscale hover:grayscale-0 transition-all duration-500"
                 loading="lazy"
               />
             </div>
           </div>
-          
+
           <div className="w-full md:w-1/2 space-y-6">
             <h2 className="text-3xl md:text-4xl font-outfit font-bold text-white mb-2">
               About <span className="text-blue-500">Me</span>
             </h2>
             <div className="h-1 w-20 bg-blue-500 rounded-full mb-6"></div>
-            
+
             <p className="text-lg text-slate-300 font-inter leading-relaxed">
               I'm a self-taught full-stack developer with a passion for building beautiful, functional, and scalable web applications. My journey started back in college when I built my first web crawler, and I've been hooked on web development ever since.
             </p>

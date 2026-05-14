@@ -1,32 +1,36 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, ExternalLink } from 'lucide-react';
+import { Code } from 'lucide-react';
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured modern e-commerce platform with real-time inventory, secure payments via Stripe, and an admin dashboard.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop"
+    title: "Serverless Image Processing Pipeline 2026",
+    description: "Designed an event-driven system to process images asynchronously, improving scalability and fault tolerance. Implemented queue-based architecture using SQS to handle concurrent workloads.",
+    tech: ["AWS Lambda", "SQS", "Python"],
+    github: "https://github.com/Surya250106/image-processing-pipeline",
+    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    title: "Task Management SaaS",
-    description: "A collaborative project management tool featuring real-time updates, drag-and-drop kanban boards, and team workspaces.",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB", "Redux Toolkit"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop"
+    title: "Multi-Region Backend System 2026",
+    description: "Built a distributed backend supporting multi-region deployment with load balancing and failover handling. Used Kafka for asynchronous communication, improving system resilience and throughput.",
+    tech: ["NGINX", "PostgreSQL", "Kafka"],
+    github: "https://github.com/Surya250106/multi-region-property",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    title: "AI Content Generator",
-    description: "An application that leverages OpenAI's GPT models to help creators generate blog posts, social media content, and ad copy.",
-    tech: ["React", "Vite", "Express", "OpenAI API", "Framer Motion"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop"
+    title: "High-Volume Data Export Engine 2026",
+    description: "Developed a system to process and export 10M+ records efficiently using streaming techniques. Optimized memory usage and improved performance for large-scale data processing.",
+    tech: ["Python"],
+    github: "https://github.com/Surya250106/polyglot-export-engine",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    title: "Asynchronous Payment Gateway 2026",
+    description: "Built an async payment system with webhook-based event handling. Implemented retry logic and failure handling to ensure reliable transactions.",
+    tech: ["Python", "Webhooks"],
+    github: "https://github.com/Surya250106/asyncpay-payment-gateway",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1000&auto=format&fit=crop"
   }
 ];
 
@@ -57,7 +61,7 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 gap-12">
           {projects.map((project, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -65,20 +69,20 @@ export default function Projects() {
               className={`flex flex-col ${idx % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 items-center bg-slate-800/30 rounded-3xl overflow-hidden border border-slate-700/50 hover:border-slate-600 transition-all duration-300 group`}
             >
               <div className="w-full md:w-1/2 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
+                <img
+                  src={project.image}
+                  alt={project.title}
                   className="w-full h-64 md:h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
               </div>
-              
+
               <div className="w-full md:w-1/2 p-8 md:p-12">
                 <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                 <p className="text-slate-300 font-inter leading-relaxed mb-6">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tech.map((t, i) => (
                     <span key={i} className="text-xs font-medium text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full">
@@ -86,26 +90,18 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center gap-4">
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
+                  <a
+                    href={project.github}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-slate-300 hover:text-white transition-colors"
                   >
                     <Code size={20} className="mr-2" />
                     Code
                   </a>
-                  <a 
-                    href={project.live} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center text-slate-300 hover:text-blue-400 transition-colors"
-                  >
-                    <ExternalLink size={20} className="mr-2" />
-                    Live Demo
-                  </a>
+
                 </div>
               </div>
             </motion.div>

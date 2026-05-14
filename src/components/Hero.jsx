@@ -9,7 +9,7 @@ export default function Hero() {
     target: ref,
     offset: ["start start", "end start"]
   });
-  
+
   // Parallax effect for decorative circle
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
@@ -17,11 +17,11 @@ export default function Hero() {
   return (
     <section id="home" ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Decorative background parallax element */}
-      <motion.div 
+      <motion.div
         style={{ y, opacity }}
         className="absolute top-1/4 -right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"
       />
-      <motion.div 
+      <motion.div
         style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]), opacity }}
         className="absolute bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-3xl pointer-events-none"
       />
@@ -37,18 +37,18 @@ export default function Hero() {
             <span className="flex h-2 w-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
             Available for new opportunities
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-5xl md:text-7xl font-outfit font-extrabold tracking-tight text-white max-w-4xl"
           >
-            Building digital <br className="hidden md:block"/>
+            Building digital <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">experiences that matter.</span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -56,8 +56,8 @@ export default function Hero() {
           >
             Hi, I'm <span className="text-slate-200 font-semibold">Alex Developer</span>. A passionate Full Stack Engineer specializing in React, Node.js, and modern cloud architectures.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
@@ -73,9 +73,10 @@ export default function Hero() {
               View My Work
               <ArrowRight className="ml-2" size={18} />
             </Link>
-            
-            <a 
-              href="#"
+
+            <a
+              href="/resume.pdf"
+              download="Surya_Prasad_Resume.pdf"
               className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium transition-all hover:scale-105 active:scale-95 border border-slate-700"
             >
               <Download className="mr-2" size={18} />
@@ -84,8 +85,8 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
